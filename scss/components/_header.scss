@@ -1,0 +1,75 @@
+/* estilos header */
+.top-header {
+    background-color: #0e6655;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.logo-container img {
+    width: 50px;
+}
+
+.logo-container h1 {
+    color: white;
+    font-size: 24px;
+}
+
+.user-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+    /* Invierte los colores, útil para cambiar negro a blanco */
+}
+
+.navbar-toggler {
+    border: 1px solid white;
+    /* Hace que el borde sea blanco */
+}
+
+.navbar {
+    background-color: #0f816b;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    /* Centra los elementos */
+    align-items: center;
+    padding: 0;
+    margin: 0 auto;
+    /* Asegura que se mantenga centrado */
+    gap: 30px;
+    /* Ajusta la separación entre los elementos */
+}
+
+.navbar-nav .nav-link {
+    font-weight: normal !important;
+    color: white;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+.navbar-toggler {
+    border: 1px solid white;
+}
