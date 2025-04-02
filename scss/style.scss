@@ -1,9 +1,12 @@
-@use 'components/header';
-@use 'components/footer';
-@use 'components/mainGeneral';
-
 
 @use 'base/generales';
+
+@use 'components/header';
+@use 'components/mainGeneral';
+@use 'components/footer';
+
+
+
 @use 'base/responsive';
 
 
