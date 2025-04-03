@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* montserrat estilo de letra*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap");
 * {
@@ -59,6 +60,14 @@ header .navbar ul {
   margin: 0 auto;
   gap: 30px;
 }
+header .navbar a {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+header .navbar a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
 header .navbar-toggler {
   border: 1px solid white;
 }
@@ -108,6 +117,11 @@ main .productos .tarjeta-producto {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+main .productos .tarjeta-producto:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
 main .productos .tarjeta-producto img {
   width: 40%;
@@ -127,6 +141,13 @@ main .productos .tarjeta-producto .btn {
   color: white;
   padding: 5px 10px;
   border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+main .productos .tarjeta-producto .btn:hover {
+  transform: scale(1.05);
+}
+main .productos .tarjeta-producto .btn:active {
+  transform: scale(0.9);
 }
 main .formulario-contacto {
   background-color: #0f816b;
@@ -167,7 +188,7 @@ main.formulario-contacto {
   margin: 40px;
 }
 
-/* estilos footer */
+/* Estilos footer */
 footer {
   background-color: #0f816b;
   padding: 25px 40px;
@@ -178,6 +199,14 @@ footer {
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
+  background-color: #2b7a66;
+  transition: background-color 0.5s ease-in-out;
+  /* Estilo de las imágenes de redes */
+  /* Redes Sociales */
+  /* Estilo del aviso legal */
+}
+footer:hover {
+  background-color: #237a5a;
 }
 footer h3 {
   font-size: 22px;
@@ -188,21 +217,52 @@ footer h3 {
 footer img {
   max-width: 40px;
   height: auto;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 footer .imgfacebook {
   max-width: 25px;
   height: auto;
   margin-right: 5px;
 }
-footer .referencia {
+footer .link-redes ul {
+  list-style: none;
+  padding: 0;
   display: flex;
-  align-items: center;
+  gap: 20px;
   justify-content: center;
 }
-footer .referencia p {
+footer .link-redes .referencia {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out, color 0.3s ease-in-out;
+  /* Efecto cuando pasas el mouse */
+}
+footer .link-redes .referencia a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+footer .link-redes .referencia p {
   margin: 0;
   font-size: 14px;
-  color: white;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+footer .link-redes .referencia:hover img {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+}
+footer .link-redes .referencia:hover p {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+footer .footer-legal {
+  text-align: center;
+  font-size: 14px;
 }
 
 /* estilos responsive */
@@ -287,22 +347,80 @@ footer .referencia p {
 }
 @media (max-width: 480px) {
   .footer-container {
-    padding: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  .footer-container .footer-contacto,
+  .footer-container .footer-legal {
+    width: 100%;
+  }
+  .footer-container .link-redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .footer-container .link-redes h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  .footer-container .link-redes ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .footer-container .link-redes ul li {
+    width: 100%;
+    text-align: center;
+  }
+  .footer-container .link-redes ul .referencia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  .footer-container .link-redes ul .referencia a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  .footer-container .link-redes ul .referencia a:hover {
+    transform: scale(1.1);
+    color: #f1c40f;
+  }
+  .footer-container .link-redes ul .referencia a img {
+    max-width: 35px;
+    height: auto;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  }
+  .footer-container .link-redes ul .referencia a img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
   }
   .sobre-nosotros {
-    padding: 20px;
+    padding: 15px;
   }
   .titulo-sobre-nosotros {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   .informacion .texto {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   main .tarjeta-producto h3 {
-    font-size: 22px;
+    font-size: 1rem;
   }
   main .menu-tarjetas h2 {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 

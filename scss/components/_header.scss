@@ -37,7 +37,7 @@ header {
         justify-content: center;
         width: 100%;
         padding: 15px;
-    
+
         ul {
             list-style: none;
             display: flex;
@@ -47,20 +47,30 @@ header {
             margin: 0 auto;
             gap: 30px;
         }
+
+        a {
+            position: relative;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: #ffffff;
+                text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+            }
+        }
     }
-    
+
     .navbar-toggler {
         border: 1px solid $colorWhite;
-    
+
         &-icon {
             filter: invert(1);
         }
     }
-    
+
     .navbar-nav {
         .nav-link {
             font-weight: normal !important;
             color: $colorWhite;
         }
-    } 
+    }
 }
